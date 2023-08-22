@@ -1,0 +1,132 @@
+.results {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.overlay {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Dark semi-transparent background */
+  z-index: 9999; /* Make sure the overlay is above other content */
+}
+.overlay-content {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay-content img {
+  height: 336px;
+  object-fit: contain;
+  border-radius: 15px;
+  width: 600px;
+}
+
+.bigcard {
+  background-image: linear-gradient(to right, #051421, #042727);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  overflow: hidden;
+  width: 44%;
+}
+.bigcardtxt {
+  width: 85%;
+}
+.bigcardtxt h1 {
+  margin: 10px;
+  font-size: 44px;
+}
+.buttondiv {
+  /* position: relative; */
+  display: flex;
+  justify-content: space-between;
+}
+.btn1 {
+  margin: 15px;
+  padding: 15px 20px;
+  border-radius: 25px;
+  border: none;
+  z-index: 1;
+  background: white;
+  overflow: hidden;
+  color: black;
+  font-size: 18px;
+  transition: all 0.5s;
+  font-weight: bold;
+  position: relative;
+}
+.btn1:hover {
+  color: white;
+  background: black;
+}
+.btn2 {
+  margin: 15px;
+  padding: 15px 20px;
+  border-radius: 25px;
+  border: none;
+  z-index: 1;
+  background: white;
+  overflow: hidden;
+  color: black;
+  font-size: 18px;
+  transition: all 0.5s;
+  font-weight: bold;
+  position: relative;
+}
+.btn2:hover {
+  color: white;
+  background: black;
+}
+/* .btn1 p {
+  z-index: 10;
+} */
+/* .buttondiv .btn1:hover {
+  cursor: pointer;
+} */
+.btnmain::after {
+  content: "";
+  position: absolute;
+  background: linear-gradient(-45deg, blue, red);
+  border-radius: 25px;
+  height: 100%;
+  width: 0%;
+  top: 0;
+  left: 0;
+  transition: all ease-in-out 0.4s;
+}
+.btnmain:hover::after {
+  width: 100%;
+}
+.btn1 {
+  z-index: 100;
+}
+
+@media (max-width: 438px) {
+  .results {
+    width: 100%;
+  }
+
+  .overlay-content {
+    width: 95%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .bigcard {
+    width: 100% !important;
+    margin: 10px;
+  }
+  .bigcardtxt h1 {
+    margin: 10px;
+    font-size: 25px;
+  }
+}

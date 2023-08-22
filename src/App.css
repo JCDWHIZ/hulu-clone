@@ -1,0 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+}
+.app {
+  width: 100vw;
+  background-image: linear-gradient(to right, #051421, #042727);
+}
+@media (min-width: 438px) {
+}

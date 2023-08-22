@@ -1,0 +1,71 @@
+.videocard {
+  color: #ffffff;
+  width: 400px;
+  height: 400px;
+  padding: 20px;
+  transition: transform 100ms;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.videocard:hover {
+  transform: scale(1.09);
+}
+.videocard > img {
+  height: 300px;
+  position: relative;
+  object-fit: contain;
+  width: 350px;
+}
+.videocard_stats {
+  display: none;
+}
+
+.videocard:hover .videocard_stats {
+  display: flex;
+  gap: 10px;
+}
+
+.videocard > h2 {
+  padding-top: 10px;
+}
+
+.videocardtext {
+  width: 90%;
+}
+
+.overlay {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6); /* Dark semi-transparent background */
+  z-index: 999; /* Make sure the overlay is above other content */
+}
+
+/* .over {
+  display: inline;
+} */
+/* .overlay {
+  display: none;
+  position: absolute;
+  top: -231px;
+  left: 0;
+}
+.videocard:hover > .overlay {
+  display: inline;
+} */
+/* .videocard img::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+} */
+@media (max-width: 360px) {
+  .videocard img {
+    width: 300px;
+  }
+  .videocard {
+    width: 300px;
+  }
+}
